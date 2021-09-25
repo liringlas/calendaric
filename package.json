@@ -1,0 +1,23 @@
+{
+  "name": "calendaric",
+  "version": "0.0.1",
+  "description": "Simple utility for generating calendar days",
+  "main": "calendaric.js",
+  "module": "calendaric.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catbug-developer/calendaric.git"
+  },
+  "author": "Konstantin Ryzhov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catbug-developer/calendaric/issues"
+  },
+  "homepage": "https://github.com/catbug-developer/calendaric#readme",
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}
