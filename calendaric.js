@@ -27,33 +27,26 @@ var incrementOneDay = function (date) {
 var getWeekDayName = function (date) {
     return exports.WEEK_DAYS[date.getDay()];
 };
+var makeEmptyCalendaricWeek = function () { return ({
+    1: null,
+    2: null,
+    3: null,
+    4: null,
+    5: null,
+    6: null,
+    0: null,
+}); };
 var populateWeeks = function (weeksArray, day, isLastDayOfMonth) {
     // Add first week
     if (weeksArray.length === 0) {
-        weeksArray.push({
-            0: null,
-            1: null,
-            2: null,
-            3: null,
-            4: null,
-            5: null,
-            6: null,
-        });
+        weeksArray.push(makeEmptyCalendaricWeek());
     }
     var lastIterableWeek = weeksArray[weeksArray.length - 1];
     lastIterableWeek[day.weekDay] = day;
     var isSunday = day.weekDay === 0;
     // It's sunday but not the last day of month
     if (isSunday && !isLastDayOfMonth) {
-        weeksArray.push({
-            0: null,
-            1: null,
-            2: null,
-            3: null,
-            4: null,
-            5: null,
-            6: null,
-        });
+        weeksArray.push(makeEmptyCalendaricWeek());
     }
     return weeksArray;
 };

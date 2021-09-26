@@ -31,6 +31,16 @@ let incrementOneDay = (date: Date): Date => {
 let getWeekDayName = (date: Date): string =>
   WEEK_DAYS[date.getDay() as WeekDays];
 
+let makeEmptyCalendaricWeek = (): CalendaricWeek => ({
+  1: null,
+  2: null,
+  3: null,
+  4: null,
+  5: null,
+  6: null,
+  0: null,
+});
+
 let populateWeeks = (
   weeksArray: CalendaricWeek[],
   day: CalendaricDay,
@@ -38,15 +48,7 @@ let populateWeeks = (
 ) => {
   // Add first week
   if (weeksArray.length === 0) {
-    weeksArray.push({
-      0: null,
-      1: null,
-      2: null,
-      3: null,
-      4: null,
-      5: null,
-      6: null,
-    });
+    weeksArray.push(makeEmptyCalendaricWeek());
   }
 
   let lastIterableWeek = weeksArray[weeksArray.length - 1];
@@ -56,15 +58,7 @@ let populateWeeks = (
 
   // It's sunday but not the last day of month
   if (isSunday && !isLastDayOfMonth) {
-    weeksArray.push({
-      0: null,
-      1: null,
-      2: null,
-      3: null,
-      4: null,
-      5: null,
-      6: null,
-    });
+    weeksArray.push(makeEmptyCalendaricWeek());
   }
 
   return weeksArray;
