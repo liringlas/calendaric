@@ -1,6 +1,6 @@
 {
   "name": "calendaric",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple utility for generating calendar days",
   "main": "calendaric.js",
   "module": "calendaric.js",
