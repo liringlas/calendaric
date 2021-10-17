@@ -1,5 +1,8 @@
 # calendaric
 
+### If lib size is matter for you
+[Compiled JS file is just 2.9Kb](/calendaric.js)
+
 ### Simple utility for generating calendar days
 
 ```js
